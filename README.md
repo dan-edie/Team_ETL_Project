@@ -22,14 +22,14 @@ Due to the short timeline, teamwork will be crucial to the success of this proje
     4) Saturday June 6. Final review of MongoDB. Create team report for submittion by end of class. D.1 below.
 
 # Project Proposal and Submission
-### A. Project Proposal - COMPLETE
+### A. Project Proposal 
 Before you start writing any code, remember that you only have one week to complete this project. View this project as a typical assignment from work. Imagine a bunch of data came in and you and your team are tasked with migrating it to a production data base. Take advantage of your Instructor and TA support during office hours and class project work time. They are a valuable resource and can help you stay on track.
 
     Extract, Transform, Load Report Proposal Form
     A.1 https://files.slack.com/files-pri/TTBSW3KEH-F0158RNJ7QQ/image.png
 
 # Data Sources
-### B. Finding Data - COMPLETE
+### B. Finding Data 
 Your project must use 2 or more sources of data. We recommend the following sites to use as sources of data:
 (You can also use APIs or data scraped from the web. However, get approval from your instructor first. Again, there is only a week to complete this!)
 
@@ -46,7 +46,7 @@ Your project must use 2 or more sources of data. We recommend the following site
     * Spotify API Features Data: 60,000+ Songs.
 
 # Data Modeling and Engineering
-### C. Data Cleanup & Analysis - Goal for Thursday evening class is to clean and load the data into MongoDB. - COMPLETE
+### C. Data Cleanup & Analysis - Goal for Thursday evening class is to clean and load the data into MongoDB. 
 Once you have identified your datasets, perform ETL on the data. Make sure to plan and document the following:
 
     C.1) Data Modeling and Engineering.
@@ -59,8 +59,14 @@ Once you have identified your datasets, perform ETL on the data. Make sure to pl
     b. The final tables or collections that will be used in the production database.
     c. Load the data into MongoDB.
 
-# Project Report 
-### D. Project Report - TO DO
+# Project Technical Report 
+### D. Project Reference Information
+    ETL Project Team GitHub:  https://github.com/robgauer/Team_ETL_Project/tree/master
+    Project Code file name:  https://github.com/robgauer/Team_ETL_Project/blob/master/ETL_Project.ipynb
+    PostgreSQL Database:  album_db
+![PostgreSQL_album_db.png](Images/PostgreSQL_album_db.png)
+
+### ETL Project Technical Report:
     At the end of the week, your team will submit a Final Report that describes the following:
     * **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
     * **T**ransform: what data cleaning or transformation was required.
