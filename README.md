@@ -68,8 +68,10 @@ Once you have identified your datasets, perform ETL on the data. Make sure to pl
 figure: PostgreSQL_album_db.png
 ![PostgreSQL_album_db.png](Images/postgresql_album_db.png)
 
-### ETL Project Technical Report:
+### D.1) ETL Project Technical Report.
 ### At the end of the week, your team will submit a Final Report that describes the following:
+
+## ETL Project Technical Report:
     
 * **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
     For our project, we chose our data sets from two sources: for the list of music from Spotify, we chose two datasets.
@@ -110,9 +112,8 @@ figure: PostgreSQL_album_db.png
 
 # Project Submission Requirements
 ### F. Please upload the report to Github and submit a link to Bootcampspot.
-# D.1) Technical Report.
-# a. You will be required to submit a final technical report with the above information and steps required to reproduce your ETL process. 
-* See ETL Project Technical Report above.
+#### a. You will be required to submit a final technical report with the above information and steps required to reproduce your ETL process. 
+* See ETL Project Technical Report. Section D.1 above.
 
 - - -
 #### Copyright
