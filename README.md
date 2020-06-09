@@ -64,13 +64,24 @@ Once you have identified your datasets, perform ETL on the data. Make sure to pl
     ETL Project Team GitHub:  https://github.com/robgauer/Team_ETL_Project/tree/master
     Project Code file name:  https://github.com/robgauer/Team_ETL_Project/blob/master/ETL_Project.ipynb
     PostgreSQL Database:  album_db
+
+figure: PostgreSQL_album_db.png
 ![PostgreSQL_album_db.png](Images/postgresql_album_db.png)
 
 ### ETL Project Technical Report:
     At the end of the week, your team will submit a Final Report that describes the following:
+    
     * **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
+    For our project, we chose our data sets from two sources: for the list of music from Spotify, we chose two datasets. The first set of data came from Kaggle and was a .csv file. The data was for 61,045 songs pulled from different Spotify playlists. It contains fourteen numerical ratings for categories such as popularity, danceability, tempo, energy, and loudness. Each song’s Spotify ID is also included, as well as the album the song was released on.The second dataset was downloaded from Zenodo was a .csv file of Billboard magazine rankings for Album’s found on Spotify. As with the Kaggle dataset, the fourteen numerical categories were included. In addition, data about the review wasalso included, such as the reviewer’s name and score given to the album. Some album’s had multiple reviews; the review date was also included.We researched the possibility of using Spotify’s API to pull our own data for use in our project, however we discovered a downside to this approach. Spotify’s API requires the use of an id to perform queries on song tracks or albums. So, for example, if you wanted to pull up the information for a specific album, you would have to provide either the album title or the album’s id. You cannot just run a blind query and find all the songs in a specific musical category on Spotify. Spotify has created their API more for those users who are looking to build apps thatuse Spotify, or web-based integration, versus someone querying large amounts of data. To effectively build a large set of data on our own, we would have to find the idfor many user-generated playlists and query that data. We decided against this approach; for the scope of our project, it would take too long to find the playlists we wanted to give us a wide range of music, and with the dataset from Kaggle already providing that information, it would not have added any additional useful data.
+
     * **T**ransform: what data cleaning or transformation was required.
+    
+    
     * **L**oad: the final database, tables/collections, and why this was chosen.
+    After the transformation of data, the last step was to load our final output into a database. The database was created and the clean data from the final panda’s data frame was loaded to SQL using SQL Alchemy. Here, we verified the data using select query. See figure: PostgreSQL_album_db.png above.
+
+    Moreover, the whole data was read from the table and loaded to the new data frame. The data frame was sorted by score and album. Finally, the transformed data frame was saved to csv file. SummaryWe extracted these data sets from different sources. Those data are loaded into data frame andmerged based on shared fields (album and artists). The dataset was cleaned by removing duplicates and unnecessary data. And the final data frame was loaded into database.
+
 
 D.1) Technical Report.
     a. You will be required to submit a final technical report with the above information and steps required to reproduce your ETL process.
