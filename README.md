@@ -64,7 +64,7 @@ Once you have identified your datasets, perform ETL on the data. Make sure to pl
     ETL Project Team GitHub:  https://github.com/robgauer/Team_ETL_Project/tree/master
     Project Code file name:  https://github.com/robgauer/Team_ETL_Project/blob/master/ETL_Project.ipynb
     PostgreSQL Database:  album_db
-![PostgreSQL_album_db.png](Images/PostgreSQL_album_db.png)
+![PostgreSQL_album_db.png](Images/postgresql_album_db.png)
 
 ### ETL Project Technical Report:
     At the end of the week, your team will submit a Final Report that describes the following:
