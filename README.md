@@ -69,9 +69,9 @@ figure: PostgreSQL_album_db.png
 ![PostgreSQL_album_db.png](Images/postgresql_album_db.png)
 
 ### ETL Project Technical Report:
-    At the end of the week, your team will submit a Final Report that describes the following:
+### At the end of the week, your team will submit a Final Report that describes the following:
     
-    * **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
+* **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
     For our project, we chose our data sets from two sources: for the list of music from Spotify, we chose two datasets.
     The first set of data came from Kaggle and was a .csv file. The data was for 61,045 songs pulled from different 
     Spotify playlists. It contains fourteen numerical ratings for categories such as popularity, danceability, tempo,
@@ -90,10 +90,10 @@ figure: PostgreSQL_album_db.png
     of our project, it would take too long to find the playlists we wanted to give us a wide range of music, and 
     with the dataset from Kaggle already providing that information, it would not have added any additional useful data.
 
-    * **T**ransform: what data cleaning or transformation was required.
+* **T**ransform: what data cleaning or transformation was required.
     
     
-    * **L**oad: the final database, tables/collections, and why this was chosen.
+* **L**oad: the final database, tables/collections, and why this was chosen.
     After the transformation of data, the last step was to load our final output into a database. 
     The database was created and the clean data from the final panda’s data frame was loaded to SQL using SQL Alchemy. 
     Here, we verified the data using select query. 
@@ -106,12 +106,13 @@ figure: PostgreSQL_album_db.png
     data frame was loaded into database.
 
 
-D.1) Technical Report.
-    a. You will be required to submit a final technical report with the above information and steps required to reproduce your ETL process.
+
 
 # Project Submission Requirements
 ### F. Please upload the report to Github and submit a link to Bootcampspot.
-
+# D.1) Technical Report.
+# a. You will be required to submit a final technical report with the above information and steps required to reproduce your ETL process. 
+* See ETL Project Technical Report above.
 
 - - -
 #### Copyright
