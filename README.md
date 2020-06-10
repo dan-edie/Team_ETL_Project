@@ -98,7 +98,7 @@ figure: PostgreSQL_album_db.png
     with the dataset from Kaggle already providing that information, it would not have added any additional useful data.
 
 * **T**ransform: what data cleaning or transformation was required.
-    Once we downloaded the CSV files for the songs and reviews, we read the CSV files intoa jupyter notebook using Pandas.  
+    Once we downloaded the CSV files for the songs and reviews, we read the CSV files intoa jupyter notebook using Pandas.
     The two CSV files had similar information in them, notably columns for artist and album.  We wanted to merge these 
     data sets so that we could have a reviewscore for the album associated with every track on that record.    
     
@@ -132,10 +132,9 @@ figure: PostgreSQL_album_db.png
     Moreover, the whole data was read from the table and loaded to the new data frame. The data frame was sorted 
     by score and album. Finally, the transformed data frame was saved to csv file. 
     
-    Summary
-    We extracted these data sets from different sources. Those data are loaded into data frame andmerged based 
-    on shared fields (album and artists). The dataset was cleaned by removing duplicates and unnecessary data. 
-    And the final data frame was loaded into database.
+    Summary, We extracted these data sets from different sources. Those data are loaded into data frame and merged
+    based on shared fields (album reviews and artists songs). The dataset was cleaned by removing duplicates 
+    and unnecessary data. Then the final data frame was loaded into the database.
 
 
 # Project Submission Requirements
