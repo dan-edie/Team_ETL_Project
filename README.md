@@ -1,5 +1,6 @@
 # ETL PROJECT
 This document contains guidelines, requirements, and suggestions for the ETL Project.
+This document also contains the ETL Project Technical Report. See section 'Project Technical Report' below.
 * Date Due: Tuesday June 9, 2020
 
 # ETL Project Guidelines 
