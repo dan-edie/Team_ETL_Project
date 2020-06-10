@@ -78,14 +78,19 @@ figure: PostgreSQL_album_db.png
     The first set of data came from Kaggle and was a .csv file. The data was for 61,045 songs pulled from different 
     Spotify playlists. It contains fourteen numerical ratings for categories such as popularity, danceability, tempo,
     energy, and loudness. Each song’s Spotify ID is also included, as well as the album the song was released on.
+    
     The second dataset was downloaded from Zenodo was a .csv file of Billboard magazine rankings for Album’s found 
     on Spotify. As with the Kaggle dataset, the fourteen numerical categories were included. In addition, data about
     the review wasalso included, such as the reviewer’s name and score given to the album. Some album’s had multiple
-    reviews; the review date was also included.We researched the possibility of using Spotify’s API to pull our own 
+    reviews; the review date was also included.
+    
+    We researched the possibility of using Spotify’s API to pull our own 
     data for use in our project, however we discovered a downside to this approach. Spotify’s API requires the use 
     of an id to perform queries on song tracks or albums. So, for example, if you wanted to pull up the information 
     for a specific album, you would have to provide either the album title or the album’s id. You cannot just run 
-    a blind query and find all the songs in a specific musical category on Spotify. Spotify has created their API 
+    a blind query and find all the songs in a specific musical category on Spotify. 
+    
+    Spotify has created their API 
     more for those users who are looking to build apps thatuse Spotify, or web-based integration, versus someone 
     querying large amounts of data. To effectively build a large set of data on our own, we would have to find 
     the idfor many user-generated playlists and query that data. We decided against this approach; for the scope 
@@ -93,21 +98,44 @@ figure: PostgreSQL_album_db.png
     with the dataset from Kaggle already providing that information, it would not have added any additional useful data.
 
 * **T**ransform: what data cleaning or transformation was required.
+    Once we downloaded the CSV files for the songs and reviews, we read the CSV files intoa jupyter notebook using Pandas.  
+    The two CSV files had similar information in them, notably columns for artist and album.  We wanted to merge these 
+    data sets so that we could have a reviewscore for the album associated with every track on that record.    
     
+    Before merging, though, we put the artist and album columns in both data sets into all uppercase letters.  
+    This increased the data set we had after the merge because it eliminated discrepancies in the data sets that were 
+    solely the result of capitalization, e.g. “The Dark Side of the Moon” would not match with “The Dark Side Of The Moon” 
+    without doing this.
+    
+    Originally, we tried merging the data sets on just album name.  However, this led to the duplication of certain tracks 
+    in our merged data set.  After investigating, we realized this was because our data set of reviews had multiple albums 
+    of the same name by different artists.  There were thus instances where our song data set had one of these albums but 
+    not the other albums by the same name.  Thus, when we merged on just album name, Pandas would duplicate the track names
+    to include the album reviews that were actually for a different album.  Merging on both album and artist required the 
+    review to match both the artist and album name thereby eliminatingthis problem.
+    
+    Nevertheless, there were a few duplicates but this was because the review data set had two reviews for the same album, 
+    a situation we were comfortable with.  To make the fact that there were multiple reviews for the same album clear, 
+    we brought in the review author information from the review data set as well.  So, at the end of this process, 
+    we had a merged data set that included all of the track information from the song data set with the review score 
+    and review author from the review data set.  
+    
+    Finally, we looked at dropping NA values from the data sets but doing so did not alter ourdata.  In other words, 
+    there were no null values.  
     
 * **L**oad: the final database, tables/collections, and why this was chosen.
     After the transformation of data, the last step was to load our final output into a database. 
     The database was created and the clean data from the final panda’s data frame was loaded to SQL using SQL Alchemy. 
-    Here, we verified the data using select query. 
-    See figure: PostgreSQL_album_db.png above.
+    
+    Here, we verified the data using select query. See figure: PostgreSQL_album_db.png above.
 
     Moreover, the whole data was read from the table and loaded to the new data frame. The data frame was sorted 
-    by score and album. Finally, the transformed data frame was saved to csv file. SummaryWe extracted these 
-    data sets from different sources. Those data are loaded into data frame andmerged based on shared fields 
-    (album and artists). The dataset was cleaned by removing duplicates and unnecessary data. And the final 
-    data frame was loaded into database.
-
-
+    by score and album. Finally, the transformed data frame was saved to csv file. 
+    
+    Summary
+    We extracted these data sets from different sources. Those data are loaded into data frame andmerged based 
+    on shared fields (album and artists). The dataset was cleaned by removing duplicates and unnecessary data. 
+    And the final data frame was loaded into database.
 
 
 # Project Submission Requirements
